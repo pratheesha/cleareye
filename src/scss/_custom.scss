@@ -1,0 +1,67 @@
+// Here you can add other styles
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap');
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+.sidebar{ background-color: #5d5d5d;}
+.sidebar .nav-link.active .nav-icon, .sidebar .nav-link .nav-icon {
+    color: #a5a4bf;
+}
+
+.app-header .navbar-nav{ padding-right: 22px;
+    .nav-item{
+        font-size: 18px;
+        color:#5f5b5b;
+    }
+}
+.sidebar .nav-link:hover  .nav-icon {
+    color: #a5a4bf;
+}
+.sidebar .nav-link{
+    position: relative;
+    &:before{
+        content:'';
+        width:5px;
+        position: absolute;
+        height: 100%;
+        left:0px;
+        top:0px;
+        background-color: #4ad991;
+        opacity: 0;
+    }
+}
+.sidebar .nav-link:hover{
+    background-color: #545454;
+    &:before{ 
+        opacity: 1;
+    }
+}
+.sidebar .nav, .sidebar .sidebar-nav { width: 280px;}
+.app-header .navbar-brand { width: 280px; background-color: #005b4c;}
+@media (min-width: 992px) {
+.sidebar-fixed .sidebar {
+    position: fixed;
+    z-index: 1019;
+    width: 280px;
+    height: 100vh;
+}
+html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed .main, html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed .app-footer, html:not([dir="rtl"]) .sidebar-show.sidebar-fixed .main, html:not([dir="rtl"]) .sidebar-show.sidebar-fixed .app-footer {margin-left: 280px;}
+}
+html:not([dir="rtl"]) .sidebar {
+    margin-left: -280px;
+}
+
+.wrapper{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+    align-content: stretch;
+    width:100%;
+    height:calc(100vh - 105px)
+}
+.main .container-fluid {
+    padding: 0 45px;
+}
