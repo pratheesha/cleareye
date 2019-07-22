@@ -76,6 +76,7 @@ html:not([dir="rtl"]) .sidebar {
     padding: 0 45px;
 }
 .cleareye{
+    padding-top: 80px;
     &-box-wrapper{
         background-color: #fff;
         border-radius: 4px;
@@ -117,16 +118,32 @@ html:not([dir="rtl"]) .sidebar {
                 }
                 p{ display: block; text-align: center;color: #afb0b6; padding-top: 15px;}
             }
+            .uploaded-content{
+                position: absolute;
+                width: 100%;
+                top:65px;
+                left:0px;
+                height: calc(100% - 143px);
+                @extend .flexcenter;
+                flex-direction: column;
+                img {
+                    width:90px;
+                }
+                p{ display: block; text-align: center;color: #afb0b6; padding-top: 15px;}
+            }
+
             .scroll-content{ position: absolute;
                 width: 100%;
                 top:65px;
                 left:0px;
+                overflow: hidden;
                 border-bottom:1px solid #f1f1f3;
                     box-shadow: 0px 3px 18px 2px rgba(0,0,0,0.05);
                 height: calc(100% - 143px);
-                @extend .flexcenter;
-                flex-direction: column;
-                p{ display: block; text-align: center;  color: #4d4f5c;}}
+                padding-top: 35px; padding-bottom: 35px;
+                
+                
+                p{ display: block; line-height: 24px;  color: #4d4f5c;}}
             .preview-content{
                 position: absolute;
                 width: 100%;
@@ -135,7 +152,7 @@ html:not([dir="rtl"]) .sidebar {
                 height: calc(100% - 143px);
                 @extend .flexcenter;
                 flex-direction: column;
-                p{ display: block; text-align: center; font-size:13px;color: #000;}
+                p{ display: block;  font-size:13px;color: #000;}
                 &.no-preview {
                     border-bottom:1px solid #f1f1f3;
                     box-shadow: 0px 3px 18px 2px rgba(0,0,0,0.05);
@@ -170,3 +187,22 @@ html:not([dir="rtl"]) .sidebar {
 
 }
 .btn-disabled{ background-color: #b4b4c6;}
+.btn-upload{ background-color: transparent; 
+    background: url('../assets/img/cloud.png') no-repeat left center; 
+    background-size: 68px; color:#a6a7ad; padding-left: 83px; font-size: 15px;
+    &:hover {
+        background-color: transparent;
+    }
+}
+.cleareye-box-wrapper-content .hd.entity{ padding-left: 92px;box-shadow:none}
+.entity-scroll{box-shadow: none!important}
+.entity-box{
+    @extend .flexcenter;
+    align-items: flex-start;
+    & .entity-count{
+        width: 92px;
+    }
+    & .entity-content {
+        width: calc(100% - 92px)
+    }
+}

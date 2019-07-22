@@ -7,6 +7,7 @@ import { FileUploadModule } from '@iplab/ngx-file-upload';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { MalihuScrollbarModule } from 'ngx-malihu-scrollbar';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -58,7 +59,8 @@ import { ChartsModule } from 'ng2-charts';
     ChartsModule,
     FileUploadModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MalihuScrollbarModule.forRoot()
   ],
   declarations: [
     AppComponent,
